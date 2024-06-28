@@ -427,9 +427,14 @@ impl Ball {
     }
 }
 
+use serde::{Deserialize, Serialize};
+
+#[derive(Clone, Deserialize, Serialize)]
 enum NetEvent {
+    AnnounceUsername(String),
     PlayerMovement(f32),
     OpponentMovement(f32),
     BallMovement(Vec2),
     LockUser(bool),
+    UpdateScore(u32, u32),
 }

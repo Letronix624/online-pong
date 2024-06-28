@@ -5,8 +5,8 @@ edition = "2021"
 authors = [ "let" ]
 
 [dependencies]
-let-engine = { path = "../let-engine/let-engine", default-features = false, features = [ "networking", "physics" ] }
-serde = "1.0.203"
+let-engine = { path = "../let-engine/let-engine", default-features = false, features = [ "networking", "physics", "serde" ] }
+serde = { version = "1.0", features = [ "derive" ] }
 
 [features]
 default = [] # "client" ]
